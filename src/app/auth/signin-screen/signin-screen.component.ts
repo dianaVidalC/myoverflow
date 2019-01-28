@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-signin-screen',
@@ -21,8 +22,10 @@ export class SigninScreenComponent implements OnInit {
   }
 
   onSubmit () {
-    if (!this.singinForm.valid) {
+    if (this.singinForm.valid) {
       const {email, password } = this.singinForm.value;
+      const user = new User(email, password);
+      console.log(user);
     }
   }
 

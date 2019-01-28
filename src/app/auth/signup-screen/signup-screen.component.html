@@ -1,4 +1,22 @@
-<form [formGroup]="singinForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="singupForm" (ngSubmit)="onSubmit()">
+  <mat-form-field class="example-full-width">
+    <input 
+      matInput
+      type="text"
+      placeholder="Nombres"
+      formControlName="names"
+      id="names" 
+    >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input 
+      matInput
+      type="text"
+      placeholder="Apellidos"
+      formControlName="lastname"
+      id="lastname" 
+    >
+  </mat-form-field>
   <mat-form-field class="example-full-width">
     <input 
       matInput
@@ -20,3 +38,4 @@
   </mat-form-field>
   <button mat-raised-button color="accent" type="submit">Iniciar sesión</button>
 </form>
+  
